@@ -6,6 +6,14 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    
+    a {
+        color: #52B6FF;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 13.976px;
+        text-decoration: underline;
+        margin-top: 25px;
+    }
 `;
 
 export const Foto = styled.img`
