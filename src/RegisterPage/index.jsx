@@ -11,7 +11,8 @@ export default function LoginPage(){
 
     const navigate = useNavigate();
     
-    function registrar(){
+    function registrar(event){
+        event.preventDefault();
         const URL = 'https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/sign-up';
         const request = axios.post(URL, {
             email: inputs.email,
@@ -19,10 +20,16 @@ export default function LoginPage(){
             image: inputs.foto,
             password:inputs.senha
         });
-        request.then(resposta => console.log(resposta));
-        request.catch(err => console.log(err.response));
-
-        navigate("/");
+        request.then(resposta => {
+            console.log(resposta);
+            navigate("/");
+        });
+        request.catch(err => {
+            console.log(err.response.status);
+            err.response.status === 422 ? alert("Digite um email válido") : err.response.status === 409 ? 
+            alert("Email já utilizado, talvez você queira ir para a página de login") : 
+            alert("Houve um erro, por favor tente novamente")
+        });
     }
 
     return(
