@@ -8,6 +8,8 @@ export const Header = styled.header`
     align-items: center;
     justify-content: space-between;
     padding: 0px 18px;
+    position: fixed;
+    top: 0px;
 `
 
 export const Foto = styled.img`
