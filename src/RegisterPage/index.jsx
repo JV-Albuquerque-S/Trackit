@@ -6,7 +6,7 @@ import logotipo from "./../assets/Logo.png"
 import { Container, Foto, Form, Input, Button } from "./styles";
 
 
-export default function LoginPage(){
+export default function RegisterPage(){
     const [inputs, setInputs] = useState({email:"", senha:"", nome:"", foto:""});
 
     const navigate = useNavigate();

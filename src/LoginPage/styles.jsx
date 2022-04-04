@@ -54,4 +54,9 @@ export const Button = styled.button`
     font-family: 'Lexend Deca';
     font-size: 20.976px;
     color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 `
